@@ -60,7 +60,8 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     # Intentar cargar el logo, si no existe continuar sin él
     import os
-    logo_path = "logo_esip_clear.png"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    logo_path = os.path.join(script_dir, "logo_esip_clear.png")
     if os.path.exists(logo_path):
         try:
             st.image(logo_path, width=300)
@@ -75,10 +76,14 @@ with col2:
 def load_data():
     """Carga y procesa los datos de los archivos CSV"""
     try:
-        # Cargar archivos CSV
-        df_num = pd.read_csv("base_num.csv")
-        df_porc = pd.read_csv("base_porc.csv")
-        df_tipo = pd.read_csv("tipo_indicadores.csv")
+        # Obtener el directorio donde está el script
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        
+        # Cargar archivos CSV usando rutas absolutas basadas en la ubicación del script
+        df_num = pd.read_csv(os.path.join(script_dir, "base_num.csv"))
+        df_porc = pd.read_csv(os.path.join(script_dir, "base_porc.csv"))
+        df_tipo = pd.read_csv(os.path.join(script_dir, "tipo_indicadores.csv"))
         
         # Agregar tipo de indicador
         df_num['Tipo_Indicador'] = 'Numérico'
@@ -531,7 +536,10 @@ with tab4:
     
     # Leer y mostrar README
     try:
-        with open("Readme.md", "r", encoding="utf-8") as f:
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        readme_path = os.path.join(script_dir, "Readme.md")
+        with open(readme_path, "r", encoding="utf-8") as f:
             readme_content = f.read()
         st.markdown(readme_content, unsafe_allow_html=True)
     except Exception as e:
