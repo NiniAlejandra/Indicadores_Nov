@@ -1,0 +1,70 @@
+ID,Indicador,Área,Tipo
+1,Disponibilidad de Alumbrado Público,Alumbrado Público,POS
+2,Hurtos al sistema de Alumbrado Público,Alumbrado Público,NEG
+3,Hurtos al sistema de Alumbrado Público - Acumulado,Alumbrado Público,NEG
+4,Luminarias repuestas por mes,Alumbrado Público,POS
+5,Número de podas de Alumbrado Público realizadas en el mes,Alumbrado Público,POS
+6,Podas - Reporte a la CAM,Alumbrado Público,POS
+7,Número de luminarias de Alumbrado Público con MANTENIMIENTO en el mes,Alumbrado Público,POS
+8,Atención de luminarias por MANTENIMIENTOS PREVENTIVOS mensuales,Alumbrado Público,POS
+9,Redes de Alumbrado Público con MANTENIMIENTO,Alumbrado Público,POS
+10,Redes de Alumbrado Público CONSTRUIDAS,Alumbrado Público,POS
+11,Redes de Alumbrado Público AMPLIADAS,Alumbrado Público,POS
+12,Redes de Alumbrado Público MEJORADAS,Alumbrado Público,POS
+13,Total Pqrs recibidos al mes,Atención al Usuario,NEG
+14,Total Pqrs recibidos al mes según canal de recepción- Correo Electrónico,Atención al Usuario,NEU
+15,Total Pqrs recibidos al mes según canal de recepción- Llamada,Atención al Usuario,NEU
+16,Total Pqrs recibidos al mes según canal de recepción- Ventanilla Física escrtita,Atención al Usuario,NEU
+17,Total Pqrs recibidos al mes según canal de recepción- Ventanilla Física verbal,Atención al Usuario,NEU
+18,Total Pqrs recibidos al mes según canal de recepción- Whatsapp,Atención al Usuario,NEU
+19,Total Pqrs recibicidos al mes según subtema- Agradecimiento,Atención al Usuario,POS
+20,Total Pqrs recibicidos al mes según subtema- Expansión,Atención al Usuario,NEU
+21,Total Pqrs recibicidos al mes según subtema- Mantenimiento,Atención al Usuario,NEU
+22,Total Pqrs recibicidos al mes según subtema- Aimpuesto AP,Atención al Usuario,NEU
+23,Total Pqrs recibicidos al mes según subtema- SAN,Atención al Usuario,NEG
+24,Total Pqrs recibicidos al mes según subtema- Otro,Atención al Usuario,NEU
+25,Total Pqrs recibido al mes según comuna 1,Atención al Usuario,NEU
+26,Total Pqrs recibido al mes según comuna 2,Atención al Usuario,NEU
+27,Total Pqrs recibido al mes según comuna 3,Atención al Usuario,NEU
+28,Total Pqrs recibido al mes según comuna 4,Atención al Usuario,NEU
+29,Total Pqrs recibido al mes según comuna 5,Atención al Usuario,NEU
+30,Total Pqrs recibido al mes según comuna 6,Atención al Usuario,NEU
+31,Total Pqrs recibido al mes según comuna 7,Atención al Usuario,NEU
+32,Total Pqrs recibido al mes según comuna 8,Atención al Usuario,NEU
+33,Total Pqrs recibido al mes según comuna 9,Atención al Usuario,NEU
+34,Total Pqrs recibido al mes según comuna 10,Atención al Usuario,NEU
+35,Total Pqrs recibido al mes según zona rural - Caguán,Atención al Usuario,NEU
+36,Total Pqrs recibido al mes según zona rural -Fortalecillas,Atención al Usuario,NEU
+37,Total Pqrs recibido al mes según zona rural - Guacirco,Atención al Usuario,NEU
+38,Total Pqrs recibido al mes según zona rural - Vegalarga,Atención al Usuario,NEU
+39,Total Pqrs recibido al mes según zona rural - Rioceibas,Atención al Usuario,NEU
+40,Total Pqrs recibido al mes según zona rural - San Luis,Atención al Usuario,NEU
+41,Total Pqrs recibido al mes según zona rural - Chapinero,Atención al Usuario,NEU
+42,Total Pqrs recibido al mes según Aipecito,Atención al Usuario,NEU
+43,Total Pqrs recibido al mes según OTROS/NO APLICA,Atención al Usuario,NEU
+44,Total PQRS remitido a Profesional Juridico,Atención al Usuario,NEU
+45,Totral PQRS remitido a líder de Alumbrado Público,Atención al Usuario,NEU
+46,Totral PQRS remitido a Investigaciones y  Desarrollo Social,Atención al Usuario,NEU
+47,Total PQRS remitido a Control de Recursos,Atención al Usuario,NEU
+48,Total PQRS remitido a Coordinación Administrativa,Atención al Usuario,NEU
+49,Total PQRS remitido a Líder SIG,Atención al Usuario,NEU
+50,Total PQRS remitido a Profesional Financiero,Atención al Usuario,NEU
+51,Total PQRS remitido a Gerencia,Atención al Usuario,NEU
+52,Total PQRS remitido a Contadora,Atención al Usuario,NEU
+53,Total PQRS remitido a Comunicaciones y Marketing,Atención al Usuario,NEU
+54,Mediciones ambientales - Residuos aprovechables,SIG,NEG
+55,Mediciones ambientales - Residuos No aprovechables,SIG,POS
+56,Mediciones ambientales - Consumo de energía,SIG,NEG
+57,Mediciones ambientales -Valor factura por Colaborador,SIG,NEG
+58,Mediciones ambientales - Consumo de papel,SIG,NEG
+59,Publicaciones en Medios,Comunicaciones y Marketing,POS
+60,Medición de ausentismo,Coordinación Administrativa,NEG
+61,Caja Menor,Coordinación Administrativa,NEG
+62,Reporte Biométrico,Coordinación Administrativa,NEG
+63,Encuentros Sociales,Investigación y Desarrollo Social,POS
+64,Alcance Social,Investigación y Desarrollo Social,POS
+65,Mapa de Podas,Investigación y Desarrollo Social,NEU
+66,Mapa de PQRS,Investigación y Desarrollo Social,NEU
+67,ESIP en cifras,Investigación y Desarrollo Social,NEU
+68,Tiempos de respuesta PQRS,Jurídica,NEG
+69,Tiempos de respuesta PQRS  SAN,Jurídica,NEG

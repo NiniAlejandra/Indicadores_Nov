@@ -1,0 +1,70 @@
+ID,Área,Indicador,Formula,Medido a través de,Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre,Total,Valoración
+1,Alumbrado Público,Disponibilidad de Alumbrado Público ,Número de luminarias disponibles en el mes,Número de luminarias,"43,662","43,658","43,653","43,642","43,643","43,679","43,708","43,690","43,793","43,838",,,"43,681",Bajo
+2,Alumbrado Público,Hurtos al sistema de Alumbrado Público,Número de luminarias hurtadas en el mes,Número de luminarias,19,10,5,2,2,4,8,0,11,52,,,61,Medio
+3,Alumbrado Público,Hurtos al sistema de Alumbrado Público - Acumulado,Número de luminarias hurtadas acumuladas por mes,Número de luminarias,521,531,537,553,556,557,568,568,576,628,,,,Bajo
+4,Alumbrado Público,Luminarias repuestas por mes,Número de luminarias repuestas por mes,Número de luminarias,0,0,0,1,1,7,39,22,9,0,,,79,Bajo
+5,Alumbrado Público,Número de podas de Alumbrado Público realizadas en el mes,Número de podas realizadas en el mes,Número de podas ,287,354,498,617,530,334,318,43,246,61,,,"2,981",N/A
+6,Alumbrado Público,Podas - Reporte a la CAM,Número de plantulas podadas en el mes,Número de plantulas,255,172,302,104,166,159,103,0,0,0,,,"1,261",N/A
+7,Alumbrado Público,Número de luminarias de Alumbrado Público con MANTENIMIENTO en el mes,Número de luminarias mantenidas en el mes,Número de luminarias,878,"1,110","1,190",878,984,594,940,845,"1,015","1,227",,,"8,434",Alto
+8,Alumbrado Público,Atención de luminarias por MANTENIMIENTOS PREVENTIVOS mensuales,Número de luminarias mantenidas preventivos en el mes,Número de luminarias,287,354,498,617,530,334,318,43,246,61,,,"3,227",Alto
+9,Alumbrado Público,Redes de Alumbrado Público con MANTENIMIENTO,Cantidad de metros lineales mantenidos,Metros lineales,"1,165","1,464","1,688","1,465","1,514",928,"1,258",888,"1,261","1,288",,,"11,631",Alto
+10,Alumbrado Público,Redes de Alumbrado Público CONSTRUIDAS ,Cantidad de metros lineales construidos,Metros lineales,0,0,0,0,217,541,64,375,235,711,,,"1,432",Bajo
+11,Alumbrado Público,Redes de Alumbrado Público AMPLIADAS ,Cantidad de metros lineales ampliados,Metros lineales,"23,102","23,102","23,102","23,102","23,253","23,253","23,569","23,622","23,830","23,880",,,"23,830",Bajo
+12,Alumbrado Público,Redes de Alumbrado Público MEJORADAS ,Cantidad de metros lineales mejorados,Metros lineales,0,0,0,18,24,36,29,14,44,45,,,165,Alto
+13,Atención al Usuario,Total Pqrs recibidos al mes,Número de Pqrs recibidos en el mes,"Número de peticiones, quejas, reclamos recibidos",217,220,244,251,225,184,237,212,193,228,,,"1,983",Bajo
+14,Atención al Usuario,Total Pqrs recibidos al mes según canal de recepción- Correo Electrónico,Número de Pqrs recibidos en el mes según canal de recepción,"Número de peticiones, quejas, reclamos recibidos",50,51,42,53,54,68,65,68,39,51,,,490,Bajo
+15,Atención al Usuario,Total Pqrs recibidos al mes según canal de recepción- Llamada,Número de Pqrs recibidos en el mes según canal de recepción,"Número de peticiones, quejas, reclamos recibidos",50,50,59,72,45,28,44,35,36,54,,,419,Bajo
+16,Atención al Usuario,Total Pqrs recibidos al mes según canal de recepción- Ventanilla Física escrtita,Número de Pqrs recibidos en el mes según canal de recepción,"Número de peticiones, quejas, reclamos recibidos",21,21,39,24,33,18,22,18,22,29,,,218,Alto
+17,Atención al Usuario,Total Pqrs recibidos al mes según canal de recepción- Ventanilla Física verbal,Número de Pqrs recibidos en el mes según canal de recepción,"Número de peticiones, quejas, reclamos recibidos",13,10,14,12,13,14,9,10,12,13,,,107,Alto
+18,Atención al Usuario,Total Pqrs recibidos al mes según canal de recepción- Whatsapp,Número de Pqrs recibidos en el mes según canal de recepción,"Número de peticiones, quejas, reclamos recibidos",83,88,90,90,80,56,97,80,84,81,,,748,Bajo
+19,Atención al Usuario,Total Pqrs recibicidos al mes según subtema- Agradecimiento,Número de Pqrs recibidos en el mes según subtema - AGRADECIMIENTO,"Número de peticiones, quejas, reclamos recibidos",3,2,0,0,0,0,2,0,0,1,,,7,N/A
+20,Atención al Usuario,Total Pqrs recibicidos al mes según subtema- Expansión,Número de Pqrs recibidos en el mes según subtema -EXPANSIÓN,"Número de peticiones, quejas, reclamos recibidos",26,15,17,29,24,14,18,25,19,25,,,187,Bajo
+21,Atención al Usuario,Total Pqrs recibicidos al mes según subtema- Mantenimiento,Número de Pqrs recibidos en el mes según subtema - MANTENIMIENTO,"Número de peticiones, quejas, reclamos recibidos",157,167,184,188,147,115,163,132,132,156,,,"1,385",Bajo
+22,Atención al Usuario,Total Pqrs recibicidos al mes según subtema- Aimpuesto AP,Número de Pqrs recibidos en el mes según subtema - IMPUESTO AP,"Número de peticiones, quejas, reclamos recibidos",9,7,15,10,8,3,7,13,7,7,,,79,Bajo
+23,Atención al Usuario,Total Pqrs recibicidos al mes según subtema- SAN,Número de Pqrs recibidos en el mes según subtema - SAN,"Número de peticiones, quejas, reclamos recibidos",2,10,5,3,6,13,5,5,7,2,,,56,Alto
+24,Atención al Usuario,Total Pqrs recibicidos al mes según subtema- Otro,Número de Pqrs recibidos en el mes según subtema - OTRO,"Número de peticiones, quejas, reclamos recibidos",20,19,23,21,40,38,43,37,28,37,,,269,Bajo
+25,Atención al Usuario,Total Pqrs recibido al mes según comuna 1,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",14,29,27,33,25,12,32,8,17,45,,,197,Alto
+26,Atención al Usuario,Total Pqrs recibido al mes según comuna 2,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",25,19,25,18,18,8,12,6,5,10,,,136,Bajo
+27,Atención al Usuario,Total Pqrs recibido al mes según comuna 3,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",11,8,12,17,14,6,3,6,2,15,,,79,Bajo
+28,Atención al Usuario,Total Pqrs recibido al mes según comuna 4,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",17,10,10,9,15,18,6,1,10,17,,,96,Alto
+29,Atención al Usuario,Total Pqrs recibido al mes según comuna 5,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",12,15,14,16,11,12,16,6,5,12,,,107,Bajo
+30,Atención al Usuario,Total Pqrs recibido al mes según comuna 6,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",28,26,27,30,15,30,34,21,24,25,,,235,Alto
+31,Atención al Usuario,Total Pqrs recibido al mes según comuna 7,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",16,18,21,19,15,4,9,4,4,14,,,110,Bajo
+32,Atención al Usuario,Total Pqrs recibido al mes según comuna 8,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",16,16,26,20,11,10,17,7,8,10,,,131,Alto
+33,Atención al Usuario,Total Pqrs recibido al mes según comuna 9,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",19,13,11,15,18,7,10,3,9,9,,,105,Alto
+34,Atención al Usuario,Total Pqrs recibido al mes según comuna 10,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",11,15,12,14,9,7,10,7,7,15,,,92,Bajo
+35,Atención al Usuario,Total Pqrs recibido al mes según zona rural - Caguán,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",6,0,6,4,4,4,4,11,4,2,,,43,Bajo
+36,Atención al Usuario,Total Pqrs recibido al mes según zona rural -Fortalecillas,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",1,1,0,4,2,0,1,3,3,3,,,15,Bajo
+37,Atención al Usuario,Total Pqrs recibido al mes según zona rural - Guacirco,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",2,0,2,1,3,7,4,1,1,2,,,21,Bajo
+38,Atención al Usuario,Total Pqrs recibido al mes según zona rural - Vegalarga,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,4,0,0,0,4,0,1,,,8,Bajo
+39,Atención al Usuario,Total Pqrs recibido al mes según zona rural - Rioceibas,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,1,0,0,0,0,1,0,1,1,,,3,#DIV/0!
+40,Atención al Usuario,Total Pqrs recibido al mes según zona rural - San Luis,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,1,0,0,0,0,0,1,1,1,,,3,Bajo
+41,Atención al Usuario,Total Pqrs recibido al mes según zona rural - Chapinero,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,0,0,0,0,0,0,0,,,0,#DIV/0!
+42,Atención al Usuario,Total Pqrs recibido al mes según Aipecito,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,0,0,0,0,1,0,0,,,1,Bajo
+43,Atención al Usuario,Total Pqrs recibido al mes según OTROS/NO APLICA,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",39,48,51,47,64,58,78,122,92,46,,,599,Bajo
+44,Atención al Usuario,Total PQRS remitido a Profesional Juridico,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",26,18,21,24,21,19,13,4,10,4,,,156,Alto
+45,Atención al Usuario,Totral PQRS remitido a líder de Alumbrado Público,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",182,190,204,219,147,152,204,173,167,208,,,"1,638",Bajo
+46,Atención al Usuario,Totral PQRS remitido a Investigaciones y  Desarrollo Social,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,5,0,3,18,3,2,13,9,8,,,53,Bajo
+47,Atención al Usuario,Total PQRS remitido a Control de Recursos ,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,0,3,2,6,16,6,8,,,33,Bajo
+48,Atención al Usuario,Total PQRS remitido a Coordinación Administrativa,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,0,1,2,1,0,0,0,,,4,#DIV/0!
+49,Atención al Usuario,Total PQRS remitido a Líder SIG,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,1,2,3,4,9,4,1,0,,,24,Bajo
+50,Atención al Usuario,Total PQRS remitido a Profesional Financiero,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",9,7,17,0,0,0,0,0,0,0,,,33,#DIV/0!
+51,Atención al Usuario,Total PQRS remitido a Gerencia,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,0,30,0,0,0,0,0,,,30,#DIV/0!
+52,Atención al Usuario,Total PQRS remitido a Contadora,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,3,1,0,0,0,0,0,,,4,#DIV/0!
+53,Atención al Usuario,Total PQRS remitido a Comunicaciones y Marketing,Número de Pqrs recibidos ,"Número de peticiones, quejas, reclamos recibidos",0,0,0,0,0,2,2,1,0,0,,,5,Bajo
+54,SIG,Mediciones ambientales - Residuos aprovechables,Residuos aprovechables,kg,,,9,,22,,15,,,,,,46,N/A
+55,SIG,Mediciones ambientales - Residuos No aprovechables,Residuos no aprovechables,Kg,35.34,39.03,41.22,38.51,46.58,43.05,36.41,42.60,53.71,58.30,,,280,Alto
+56,SIG,Mediciones ambientales - Consumo de energía,Consumo de energía / Número de Colaboradores mes,KWh ,"4,920","2,480","2,080","1,960","2,120","2,360","2,240","2,206","2,480",0,,,"2,538",Alto
+57,SIG,Mediciones ambientales -Valor factura por Colaborador,Valor factura consumo de energía/Número de colaboradores mes,COP," $  289,493 "," $  277,588 "," $  221,006 "," $  260,742 "," $  284,700 "," $  318,006 "," $  314,922 "," $  230,476 "," $  269,015 ", $  -   ,,," $  273,994 ",Alto
+58,SIG,Mediciones ambientales - Consumo de papel,Consumo de Papel,Unidades de resmas,,,,0.00,0.00,30,0,0,0,0,,,30,N/A
+59,Comunicaciones y Marketing, Publicaciones en Medios ,Número de publicaciones en medios realizadas en el mes,Número de publicaciones,,,,7,8,29,8,4,6,17,,,62,Alto
+60,Coordinación Administrativa,Medición de ausentismo,Número de días de ausencia durante el mes,Número de días,44.7,9.8,11.5,40.15,6.5,52.8,7.4,19.6,7.1,22.7,,,192.5,N/A
+61,Coordinación Administrativa, Caja Menor ,(Saldo final caja menor / Saldo inicial caja menor) * 100,Saldo final caja,,,,,"-$  163,815 "," $  234,409 "," $  874,817 "," $  27,140 ", $  -   , $  -   ,,," $  972,551 ",N/A
+62,Coordinación Administrativa, Reporte Biométrico ,(Número de colaboradores con más de tres llegadas tarde durante el mes/ Número total de trabajadores) * 100,Número de colaboradores,,,,,0,,1,2,0,1,,,3,N/A
+63,Investigación y Desarrollo Social,Encuentros Sociales,Número de encuentros sociales realizados en el mes,Número de encuentros sociales,6,7,12,12,19,6,3,6,7,8,,,78,Alto
+64,Investigación y Desarrollo Social,Alcance Social,Número de personas impactadas en encuentros sociales,Número de personas,28,65,133,90,204,52,13,49,56,55,,,689,Alto
+65,Investigación y Desarrollo Social,Mapa de Podas,Visualización de podas,link de herramienta de visualización,,,,,,,,100%,100%,100%,,,100%,Bajo
+66,Investigación y Desarrollo Social,Mapa de PQRS,Visualización y estadística de PQRS,link de herramienta de estadística y visualización,,,,,,,,100%,100%,100%,,,100%,Bajo
+67,Investigación y Desarrollo Social,ESIP en cifras,Registro mensual de las cifras ESIP,link de herramienta cifras las de mensual registro,,,,,,,,100%,100%,100%,,,100%,Bajo
+68,Jurídica,Tiempos de respuesta PQRS ,Sumatoria de (Días de respuesta de PQRS) / Número de PQRS respondidas,Promedio de días,,,,13.00,8.13,7.80,6.40,7.00,6.40,6.80,,,8.12,Bajo
+69,Jurídica,Tiempos de respuesta PQRS  SAN,el promedio de días de rta SAN aparte,Promedio de días,,,,,,,,4.00,7.60,1.3,,,  5.80 ,Alto
