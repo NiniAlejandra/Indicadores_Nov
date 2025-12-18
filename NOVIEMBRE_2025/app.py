@@ -37,7 +37,11 @@ st.set_page_config(layout="wide", page_title="Indicadores ESIP 2025")
 col_logo, col_title = st.columns([1, 10])
 with col_logo:
     try:
-        st.image('logo_esip_clear.png', width=100)
+        import os
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        logo_path = os.path.join(script_dir, 'logo_esip_clear.png')
+        if os.path.exists(logo_path):
+            st.image(logo_path, width=100)
     except:
         pass
 
@@ -94,9 +98,28 @@ def limpiar_valor_porcentual(valor):
 def cargar_y_limpiar_datos():
     """Carga y limpia los datos de ambos CSV"""
     try:
+        import os
+        # Obtener el directorio del script actual
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        
+        # Construir rutas a los archivos CSV
+        ruta_num = os.path.join(script_dir, 'Ind_num.csv')
+        ruta_porc = os.path.join(script_dir, 'Ind_porc.csv')
+        
+        # Verificar que los archivos existan
+        if not os.path.exists(ruta_num):
+            st.error(f"No se encontró el archivo: {ruta_num}")
+            st.info(f"Directorio actual: {script_dir}")
+            st.info(f"Archivos en el directorio: {os.listdir(script_dir) if os.path.exists(script_dir) else 'Directorio no existe'}")
+            return None, None
+        
+        if not os.path.exists(ruta_porc):
+            st.error(f"No se encontró el archivo: {ruta_porc}")
+            return None, None
+        
         # Cargar archivos CSV
-        df_num = pd.read_csv('Ind_num.csv', sep=',', encoding='utf-8')
-        df_porc = pd.read_csv('Ind_porc.csv', sep=',', encoding='utf-8')
+        df_num = pd.read_csv(ruta_num, sep=',', encoding='utf-8')
+        df_porc = pd.read_csv(ruta_porc, sep=',', encoding='utf-8')
         
         # Agregar columna de tipo
         df_num['Tipo'] = 'Numéricos'
