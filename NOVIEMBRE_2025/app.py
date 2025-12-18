@@ -2,9 +2,31 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import numpy as np
+import sys
 
-df_num = pd.read_csv("Ind_num.csv")
-df_porc = pd.read_csv("Ind_porc.csv")
+# ============================================================================
+# VALIDACIÓN: Verificar que se ejecuta con Streamlit
+# ============================================================================
+# Esta aplicación DEBE ejecutarse con 'streamlit run app.py'
+try:
+    # Intentar usar una función de Streamlit para verificar que está disponible
+    _ = st.__version__
+    # Verificar que estamos en un contexto de ejecución de Streamlit
+    from streamlit.runtime.scriptrunner import get_script_run_ctx
+    if get_script_run_ctx() is None:
+        raise RuntimeError("No Streamlit context")
+except (AttributeError, RuntimeError, ImportError):
+    print("\n" + "="*70)
+    print("ERROR: Esta aplicación DEBE ejecutarse con Streamlit")
+    print("="*70)
+    print("\n❌ NO ejecutes: python app.py")
+    print("✅ SÍ ejecuta: streamlit run app.py")
+    print("\nPasos correctos:")
+    print("  1. Abre una terminal/cmd")
+    print("  2. Navega a la carpeta: cd NOVIEMBRE_2025")
+    print("  3. Ejecuta: streamlit run app.py")
+    print("\n" + "="*70 + "\n")
+    sys.exit(1)
 
 # ============================================================================
 # CONFIGURACIÓN INICIAL
@@ -33,7 +55,7 @@ def limpiar_valor_numerico(valor):
         return np.nan
     if isinstance(valor, str):
         valor_str = str(valor).strip()
-        if valor_str in ['#DIV/0!', '#ERROR!', '-', 'N/A', 'N/A']:
+        if valor_str in ['#DIV/0!', '#ERROR!', '-', 'N/A']:
             return np.nan
         # Eliminar comas, espacios y símbolos de moneda
         valor_limpio = valor_str.replace(',', '').replace('$', '').replace(' ', '').replace('COP', '')
@@ -110,7 +132,6 @@ def cargar_y_limpiar_datos():
         df = pd.concat([df_num, df_porc], ignore_index=True)
         
         # Si hay filas duplicadas (mismo ID, Área, Indicador), consolidar
-        # Agrupar por ID, Área, Indicador y tomar el primer valor no nulo de cada columna
         columnas_agrupar = ['ID', 'Área', 'Indicador']
         
         # Función para consolidar valores (tomar el primero no nulo)
@@ -122,12 +143,13 @@ def cargar_y_limpiar_datos():
         
         # Agrupar y consolidar todas las columnas excepto las de agrupación
         columnas_para_consolidar = [col for col in df.columns if col not in columnas_agrupar]
-        
-        # Crear diccionario de agregación
         dict_agg = {col: consolidar_serie for col in columnas_para_consolidar}
         
         # Agrupar y consolidar
-        df_consolidado = df.groupby(columnas_agrupar, as_index=False).agg(dict_agg)
+        try:
+            df_consolidado = df.groupby(columnas_agrupar, as_index=False).agg(dict_agg)
+        except:
+            df_consolidado = df.copy()
         
         # Asegurar que Tipo tenga valores
         if 'Tipo' in df_consolidado.columns:
@@ -148,8 +170,20 @@ def load_data():
 
 df, meses = load_data()
 
-if df is None:
+# Validar que los datos se cargaron correctamente
+if df is None or meses is None:
+    st.error("Error al cargar los datos. Por favor, verifica que los archivos Ind_num.csv e Ind_porc.csv existan en la misma carpeta.")
     st.stop()
+
+# Validar que df es un DataFrame válido
+if not isinstance(df, pd.DataFrame):
+    st.error("Error: Los datos cargados no son un DataFrame válido.")
+    st.stop()
+
+# Validar que meses sea una lista válida
+if not isinstance(meses, list) or len(meses) == 0:
+    meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+             'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre']
 
 # ============================================================================
 # SIDEBAR CON FILTROS
@@ -160,8 +194,8 @@ st.sidebar.header("Filtros")
 mes_inicio, mes_fin = st.sidebar.slider(
     "Rango de Meses",
     min_value=1,
-    max_value=11,
-    value=(1, 11),
+    max_value=len(meses) if meses else 11,
+    value=(1, len(meses) if meses else 11),
     format="Mes %d"
 )
 
@@ -169,7 +203,12 @@ mes_inicio, mes_fin = st.sidebar.slider(
 meses_seleccionados = meses[mes_inicio-1:mes_fin]
 
 # No aplicar filtros adicionales, usar todos los datos
-df_filtrado = df.copy()
+# Validar nuevamente antes de copiar
+if df is not None and isinstance(df, pd.DataFrame):
+    df_filtrado = df.copy()
+else:
+    st.error("Error: No se puede procesar el DataFrame.")
+    st.stop()
 
 # ============================================================================
 # COLORES CORPORATIVOS
@@ -180,45 +219,28 @@ COLOR_GRIS = '#4a4a4a'
 COLORES = [COLOR_PRINCIPAL, COLOR_VERDE, COLOR_GRIS, '#ff6b6b', '#4ecdc4', '#ffe66d']
 
 # ============================================================================
-# FUNCIONES AUXILIARES PARA MÉTRICAS
-# ============================================================================
-
-def obtener_total_pqrs(df):
-    """Obtiene el total de PQRS recibidas"""
-    pqrs = df[df['Indicador'].str.contains('Total Pqrs recibidos al mes', case=False, na=False)]
-    if not pqrs.empty and 'Total' in pqrs.columns:
-        total = pqrs['Total'].sum()
-        return int(total) if not pd.isna(total) else 0
-    return 0
-
-def obtener_promedio_luminarias_mantenidas(df):
-    """Obtiene el promedio mensual de luminarias mantenidas"""
-    mantenimiento = df[df['Indicador'].str.contains('luminarias.*MANTENIMIENTO', case=False, na=False, regex=True)]
-    if not mantenimiento.empty:
-        valores_mensuales = []
-        for mes in meses:
-            if mes in mantenimiento.columns:
-                valores = mantenimiento[mes].dropna()
-                if not valores.empty:
-                    valores_mensuales.extend(valores.tolist())
-        if valores_mensuales:
-            return int(np.mean(valores_mensuales))
-    return 0
-
-def obtener_total_metros_construidos(df):
-    """Obtiene el total de metros lineales construidos"""
-    construccion = df[df['Indicador'].str.contains('CONSTRUIDAS', case=False, na=False)]
-    if not construccion.empty and 'Total' in construccion.columns:
-        total = construccion['Total'].sum()
-        return int(total) if not pd.isna(total) else 0
-    return 0
-
-# ============================================================================
 # ESTRUCTURA PRINCIPAL CON TABS
 # ============================================================================
 
+# Validar que df existe y tiene la columna Área antes de crear tabs
+if df is None or not isinstance(df, pd.DataFrame):
+    st.error("Error: El DataFrame no está disponible.")
+    st.stop()
+
+if 'Área' not in df.columns:
+    st.error("Error: No se encontró la columna 'Área' en los datos.")
+    st.stop()
+
 # Crear lista de tabs solo con las áreas
-areas_disponibles = sorted(df['Área'].unique().tolist())
+try:
+    areas_disponibles = sorted(df['Área'].unique().tolist())
+    if not areas_disponibles:
+        st.warning("No se encontraron áreas en los datos.")
+        st.stop()
+except Exception as e:
+    st.error(f"Error al obtener las áreas: {str(e)}")
+    st.stop()
+
 tabs = st.tabs(areas_disponibles)
 
 # ============================================================================
@@ -349,8 +371,6 @@ for idx, area in enumerate(areas_disponibles):
                 st.markdown("### Promedio")
                 
                 # Calcular promedios de los indicadores del área
-                # Calcular promedio por indicador usando los meses seleccionados
-                promedios = []
                 for _, row in df_area.iterrows():
                     valores_mensuales = []
                     for mes in meses_seleccionados:
@@ -401,4 +421,3 @@ st.markdown(
     "<p style='text-align: center; color: #999; font-size: 10px;'>Desarrollado por Alejandra Valderrama para ESIP SAS ESP</p>",
     unsafe_allow_html=True
 )
-
